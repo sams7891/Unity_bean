@@ -1,0 +1,58 @@
+﻿using TMPro;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class IntaraSkripts : MonoBehaviour
+{
+    private string text;
+    private string[] input = { "Sveiks", "Konichiva", "Booba", "Jēziņ", "UZ VISU LABU" };
+    private int rand;
+
+    public GameObject inputField;
+    public GameObject textField;
+    public GameObject reverseTextToggle;
+
+
+    public void GetText()
+    {
+        rand = Random.Range(0, input.Length);
+
+        text = inputField.GetComponent<TMP_InputField>().text;
+
+        if (text.Equals("Intars"))
+        {
+            textField.GetComponent<TMP_Text>().text = "Go kill yourself fake jew Heil to Netanyahu";
+            return;
+        } else if (text.Equals("Rodrigo"))
+        {
+            textField.GetComponent<TMP_Text>().text = "Heil Netanyahu, Heil Israel, Heil " + text;
+            return;
+        }
+
+
+        textField.GetComponent<TMP_Text>().text = input[rand] + " " + text + "!";
+
+        reverseTextToggle.GetComponent<Toggle>().interactable = true;
+
+        if (reverseTextToggle.GetComponent<Toggle>().isOn)
+        {
+            ReverseText();
+        }
+
+
+    }
+
+    public void ReverseText()
+    {
+        char[] charArray = textField.GetComponent<TMP_Text>().text.ToCharArray();
+        System.Array.Reverse(charArray);
+        textField.GetComponent<TMP_Text>().text = new string(charArray);
+    }
+}
+
+
+
+    
+
+
