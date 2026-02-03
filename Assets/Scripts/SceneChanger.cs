@@ -18,14 +18,9 @@ public class SceneChanger : MonoBehaviour
     public void QuitApplication()
     {
 
-        if (UnityEditor.EditorApplication.isPlaying)
-        {
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
-        else
-        {
+        
             Application.Quit();
-        }
+        
             
 
         
