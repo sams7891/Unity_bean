@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 24b4143892e86994685ebf5d00b1d7e8
+guid: 092cf297a730f8d489c3515f5235be48
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5012268097738965436
-    second: tvImage_0
+      213: 5511267765948873110
+    second: carPolice_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tvImage_0
+      name: carPolice_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 293
-        height: 301
+        x: 45
+        y: 0
+        width: 614
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 44efe33a8b8d07ab0800000000000000
-      internalID: -5012268097738965436
+      spriteID: 699717b45d4fb7c40800000000000000
+      internalID: 5511267765948873110
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      tvImage_0: -5012268097738965436
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
