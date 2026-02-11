@@ -4,24 +4,27 @@ public class animatorWalkingScript : MonoBehaviour
 {
     public Animator anim;
     public RectTransform rect;
-
     public float animationSpeed = 1f;
 
     float time = 0f;
     int direction = 1;
 
-    void Start()
+    void OnEnable()
     {
-        anim.speed = 0f; // we control time manually
+        if (anim == null) return;
+
+        anim.speed = 0f;
+        time = 0f;
+        direction = 1;
     }
 
     void Update()
     {
-        
+        if (!enabled || anim == null)
+            return;
 
         time += Time.deltaTime * animationSpeed * direction;
 
-        // Clamp between 0 and 1
         if (time >= 1f)
         {
             time = 1f;
@@ -40,14 +43,12 @@ public class animatorWalkingScript : MonoBehaviour
     {
         direction *= -1;
 
-        // Flip UI horizontally
-        Vector3 scale = rect.localScale;
-        scale.x *= -1f;
-        rect.localScale = scale;
-    }
-    void OnEnable()
-    {
-        anim.speed = 0f;
+        if (rect != null)
+        {
+            Vector3 scale = rect.localScale;
+            scale.x *= -1f;
+            rect.localScale = scale;
+        }
     }
 
     void OnDisable()
@@ -55,5 +56,4 @@ public class animatorWalkingScript : MonoBehaviour
         if (anim != null)
             anim.Rebind();
     }
-
 }
