@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 1112749459266196427}
   - component: {fileID: 1879377000135697811}
   m_Layer: 5
-  m_Name: purpleDonut
-  m_TagString: Donut
+  m_Name: bowlinBall
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4013059312791865090, guid: f4609c1124cfa2d48b36046bad71327e, type: 3}
+  m_Sprite: {fileID: -5209770593435852469, guid: f8f5308ad9268524aa74c80679e425f4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

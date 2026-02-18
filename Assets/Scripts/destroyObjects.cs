@@ -14,12 +14,12 @@ public class destroyObjects : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Donut"))
+        if (collision.CompareTag("Donut") || collision.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
             destroyedDonuts++;
             sfx.PlaySFX(0);
-            counterText.text = "Donuts destroyed: " + destroyedDonuts;
+            counterText.text = "Donuts destroyed:\n" + destroyedDonuts;
         }
     }
 

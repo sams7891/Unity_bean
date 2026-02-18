@@ -4,10 +4,10 @@ using UnityEngine;
 public class DonutBakerScript : MonoBehaviour
 {
     public GameObject[] donutPrefabs;
-    public float bakeInterval = 1f;
+    public float bakeInterval = 2f;
     float minPoz, maxPoz;
     Transform ovenTransform;
-    public float offset = 0.7f;
+    public float offset = 5f;
 
     void Start()
     {

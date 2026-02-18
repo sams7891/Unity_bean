@@ -1,22 +1,23 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CharacterController : MonoBehaviour
+public class CharacterControllerScript : MonoBehaviour
 {
     public float moveSpeed = 1f;
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private float moveInput;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        // animator = GetComponentInChildren<Animator>();
+        animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         moveInput = 0;
@@ -30,7 +31,8 @@ public class CharacterController : MonoBehaviour
             moveInput = 1;
         }
 
-        //  animator.SetBool("isWalking", moveInput != 0);
+        animator.SetBool("isWalking", moveInput != 0);
+
         if (moveInput > 0)
         {
             spriteRenderer.flipX = false;
@@ -40,7 +42,6 @@ public class CharacterController : MonoBehaviour
             spriteRenderer.flipX = true;
         }
     }
-
 
     private void FixedUpdate()
     {
